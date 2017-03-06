@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<form id="frm1">
+		Nombre: <input type="text" name="name" id="name"><br><br>
+		Mail:  <input type="text" name="email" id="email"><br> <br>
+	</form> 
+	<button onclick="myFunction()">Mostrar</button>
+
+	<p id="mostrarNombre"></p>
+	<p id="mostrarMail"></p>
+
+	<script>
+		function myFunction() {
+		var nombre = document.getElementById("name").value;
+		var mail = document.getElementById("email").value;
+			
+		if (nombre.length==0 || mail.length==0){
+		 alert("Ingrese los datos requeridos")
+		} else{
+		
+		 document.getElementById("mostrarNombre").innerHTML = "<strong> El nombre ingresado es : </strong>" + nombre + "<br> <br>";
+		 document.getElementById("mostrarMail").innerHTML =  " <strong> El correo ingresado es : </strong>"  + mail;
+	    
+		
+		}
+		}
+	</script>
+</body>
+</html>
